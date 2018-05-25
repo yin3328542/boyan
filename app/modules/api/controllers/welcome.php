@@ -74,4 +74,226 @@ class Welcome extends API_Controller
         $response['data'] = $memberInfo;
         $this->response($response);
     }
+
+    public function homepage_get()
+    {
+        if($this->app['type'] != APPTYPE_XCX ) {
+            $this->response(array('ret' => 403, 'msg' => '权限不足'), 403);
+        }
+        $this->load->model('banner_model');
+        $bannerList = $this->banner_model
+            ->select('id,name,img')
+            ->where(['type'=>'index','status'=>1])->find_all();
+        $this->load->model('attachment_model');
+        foreach ($bannerList as $k=>$v){
+            $attachment = $this->attachment_model->where(['id'=>$v['img']])->find();
+            if(empty($attachment)){
+                unset($bannerList[$k]);
+                continue;
+            }
+            $v['img'] = image_url($attachment['filepath']);
+            $bannerList[$k] = $v;
+        }
+        $result['banner_list'] =array_values($bannerList);
+
+        $this->load->model('column_model');
+        $columnList = $this->column_model
+            ->select('id,name,img')
+            ->where(['status'=>1])->find_all();
+        foreach ($columnList as $k=>$v){
+            $attachment = $this->attachment_model->where(['id'=>$v['img']])->find();
+            if(empty($attachment)){
+                unset($columnList[$k]);
+                continue;
+            }
+            $v['img'] = image_url($attachment['filepath']);
+            $columnList[$k] = $v;
+        }
+        $result['column_list'] = array_values($columnList);
+        $response['ret'] = 0;
+        $response['data'] = $result;
+        $this->response($response);
+
+    }
+
+    public function company_get()
+    {
+        if($this->app['type'] != APPTYPE_XCX ) {
+            $this->response(array('ret' => 403, 'msg' => '权限不足'), 403);
+        }
+        $this->load->model('admin_model');
+        $adminInfo = $this->admin_model->select('description')->find();
+        $result['description'] = $adminInfo['description'];
+        $result['ad_img'] = '';
+        $this->load->model('adsense_model');
+        $adsenseInfo = $this->adsense_model
+            ->join('attachment','attachment.id = adsense.img')
+            ->where(['adsense.status'=>1,'adsense.type'=>'index'])->find();
+        if(!empty($adsenseInfo)){
+            $result['ad_img'] = image_url($adsenseInfo['filepath']);
+        }
+
+        $response['ret'] = 0;
+        $response['data'] = $result;
+        $this->response($response);
+
+    }
+
+    public function services_get()
+    {
+        if($this->app['type'] != APPTYPE_XCX ) {
+            $this->response(array('ret' => 403, 'msg' => '权限不足'), 403);
+        }
+        $this->load->model('service_model');
+        $serviceList = $this->service_model
+            ->select('service.id,title,img,description')
+            ->join('attachment','attachment.id = service.img')
+            ->find_all();
+        foreach ($serviceList as $k=>$v){
+            $v['img']  =image_url($v['filepath']);
+            $serviceList[$k] = $v;
+        }
+        $result['service_list'] = $serviceList;
+        $result['ad_img'] = '';
+        $this->load->model('adsense_model');
+        $adsenseInfo = $this->adsense_model
+            ->join('attachment','attachment.id = adsense.img')
+            ->where(['adsense.status'=>1,'adsense.type'=>'service'])->find();
+        if(!empty($adsenseInfo)){
+            $result['ad_img'] = image_url($adsenseInfo['filepath']);
+        }
+
+        $response['ret'] = 0;
+        $response['data'] = $result;
+        $this->response($response);
+
+    }
+
+
+    public function cases_get()
+    {
+        if($this->app['type'] != APPTYPE_XCX ) {
+            $this->response(array('ret' => 403, 'msg' => '权限不足'), 403);
+        }
+        $limit                  = $this->get('limit') ? $this->get('limit') : 10;
+        $offset                 = $this->get('offset') ? $this->get('offset') : 0;
+        $this->load->model('news_model');
+
+        $where['status'] = 1;
+        $response['total'] = $this->news_model->where($where)->count();
+        $casesList = $this->news_model
+            ->select('news.id,title,img,intro')
+            ->join('attachment','attachment.id = news.img')
+            ->where($where)
+            ->order_by('news.id', 'desc')
+            ->limit($limit, $offset)
+            ->find_all();
+        foreach ($casesList as $k=>$v){
+            $v['img']  =image_url($v['filepath']);
+            $casesList[$k] = $v;
+        }
+        $result['cases_list'] = $casesList;
+        $result['ad_img'] = '';
+        $this->load->model('adsense_model');
+        $adsenseInfo = $this->adsense_model
+            ->join('attachment','attachment.id = adsense.img')
+            ->where(['adsense.status'=>1,'adsense.type'=>'case'])->find();
+        if(!empty($adsenseInfo)){
+            $result['ad_img'] = image_url($adsenseInfo['filepath']);
+        }
+
+        $response['ret'] = 0;
+        $response['data'] = $result;
+        $this->response($response);
+
+    }
+
+    public function case_get()
+    {
+        if($this->app['type'] != APPTYPE_XCX ) {
+            $this->response(array('ret' => 403, 'msg' => '权限不足'), 403);
+        }
+        $id                  = $this->get('id');
+        $this->load->model('news_model');
+
+        $where['status'] = 1;
+        $where['id'] = $id;
+        $caseInfo = $this->news_model
+            ->select('news.id,title,img,intro')
+            ->where($where)
+            ->find();
+        $response['ret'] = 0;
+        $response['data'] = $caseInfo;
+        $this->response($response);
+
+    }
+
+    public function contact_get()
+    {
+        if($this->app['type'] != APPTYPE_XCX ) {
+            $this->response(array('ret' => 403, 'msg' => '权限不足'), 403);
+        }
+        $result['ad_img'] = '';
+        $this->load->model('adsense_model');
+        $adsenseInfo = $this->adsense_model
+            ->join('attachment','attachment.id = adsense.img')
+            ->where(['adsense.status'=>1,'adsense.type'=>'contact'])->find();
+        if(!empty($adsenseInfo)){
+            $result['ad_img'] = image_url($adsenseInfo['filepath']);
+        }
+
+        $response['ret'] = 0;
+        $response['data'] = $result;
+        $this->response($response);
+
+    }
+
+    public function banners_get()
+    {
+        if($this->app['type'] != APPTYPE_XCX ) {
+            $this->response(array('ret' => 403, 'msg' => '权限不足'), 403);
+        }
+        $type = $this->get('type')?$this->get('type'):'index';
+        $where['banner.type'] = $type;
+        $this->load->model('banner_model');
+        $bannerList = $this->banner_model
+            ->select('banner.id,name,img')
+            ->where($where)
+            ->join('attachment','attachment.id = banner.img')
+            ->order_by('listorder','asc')
+            ->find_all();
+        foreach ($bannerList as $k=>$v){
+            $v['img']  =image_url($v['img']);
+            $bannerList[$k] = $v;
+        }
+
+        $response['ret'] = 0;
+        $response['data']['banner_list'] = $bannerList;
+        $this->response($response);
+
+    }
+
+
+    public function adsense_get()
+    {
+        if($this->app['type'] != APPTYPE_XCX ) {
+            $this->response(array('ret' => 403, 'msg' => '权限不足'), 403);
+        }
+        $type = $this->get('type')?$this->get('type'):'index';
+        $where['adsense.type'] = $type;
+        $where['adsense.status'] = 1;
+        $this->load->model('adsense_model');
+        $adsenseInfo = $this->adsense_model
+            ->select('adsense.id,name,filepath')
+            ->where($where)
+            ->join('attachment','attachment.id = adsense.img')
+            ->find();
+        !empty($adsenseInfo)&&$adsenseInfo['img'] = image_url($adsenseInfo['filepath']);
+        unset($adsenseInfo['filepath']);
+        $response['ret'] = 0;
+        $response['data'] = $adsenseInfo;
+        $this->response($response);
+
+    }
+
 }

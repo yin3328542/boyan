@@ -21,5 +21,3 @@ $route['api/del_banner']  = 'banner/api/banner/del_banner';
 $route['api/order'] = 'banner/api/banner/order';
 $route['api/banner/(:num)'] = 'banner/api/banner/banner/id/$1';
 $route['api/banner/img/(:num)'] = 'banner/api/banner/img/id/$1';
-
-$route['api/app/banners'] = 'banner/api/banner/app_banners';
