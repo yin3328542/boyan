@@ -1,0 +1,709 @@
+﻿/* 重置页面元素默然样式 */
+/* 简化版本去除部分kk网站中未使用的语义化标签 */
+/* 部分常用HTML5标签重置 使用前需测试浏览器兼容或加入HTML5兼容插件 */
+
+/*清除浮动*/
+.clearfix:after {content:".";display:block;height:0;clear:both; visibility:hidden;}
+.clearfix {display:inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height:1%;}
+.clearfix {display:block;}
+/* End hide from IE-mac */
+
+/* reset */
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, table, tbody, tfoot, thead, th, td, tr, form, input, button, textarea, img {
+    margin: 0;
+    padding: 0;
+}
+
+header, footer, nav {
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th {
+    text-align: left;
+    font-weight: normal;
+}
+
+html, body, img, iframe {
+    border: 0;
+}
+
+i, em, b {
+    font-style: normal;
+}
+
+html {
+
+    width: 100%;
+}
+
+/* 默认 */
+a:active, a:focus, input[type="button"] {
+    -moz-outline: none;
+    outline: none;
+    ie-dummy: expression(this.hideFocus=true);
+}
+
+[hidefocus] {
+    outline: 0;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+input[type="button"] {
+    padding: 0;
+}
+
+/*pre,code,kbd,samp{font-family:inherit;}*/
+/* 计算机字符样式从父级继承 非IT类网站没多大意义 */
+q:before, q:after {
+    content: none;
+}
+
+label {
+    cursor: default;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, em, strong, b {
+    font-weight: bold;
+}
+
+del, ins, u, s {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+body, textarea, input, button, select {
+    color: #ccc;
+
+}
+
+/* 网站默认字体 */
+body {
+    background: #fff;
+}
+
+/* 网站默认背景 */
+
+/* chrome outline clear */
+input, button, select {
+    outline: none;
+}
+
+/* chrome textarea resize clear */
+textarea {
+    resize: none;
+    outline: none;
+}
+
+/* 布局 */
+/* 布局结构都是非常轻量级和重复性非常高的存在于共用CSS中 */
+.g-cw {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 共用宽度定义 */
+.g-hd, .g-ft {
+    width: 100%;
+}
+
+/* 页眉页脚 */
+.g-hd {
+    height: 40px;
+    line-height: 40px;
+    background: #303537;
+    box-shadow: 0px 0px 1px #ccc;
+    width:100%;
+}
+
+.g-ft {
+    position: fixed;
+    bottom: 0;
+    background: #303537;
+}
+
+/* CSS Sprites */
+/* 统一调用背景图 */
+.icon {
+    background: url(/assets/img/icon-3.png);
+}
+
+.icon-1 {
+    width: 20px;
+    height: 20px;
+    background-size: 40px 60px;
+    display: inline-block;
+    background-position: 0 0;
+    vertical-align: middle;
+}
+
+.icon-2 {
+    width: 20px;
+    height: 20px;
+    background-size: 40px 60px;
+    display: inline-block;
+    background-position: 0 -20px;
+    vertical-align: middle;
+}
+
+.icon-3 {
+    width: 20px;
+    height: 20px;
+    background-size: 40px 60px;
+    display: inline-block;
+    background-position: 0 -40px;
+    vertical-align: middle;
+}
+
+.icon-1.icon-sele {
+    background-position: -20px 0;
+}
+
+.icon-2.icon-sele {
+    background-position: -20px -20px;
+}
+
+.icon-3.icon-sele {
+    background-position: -20px -40px;
+}
+
+.icon-4 {
+    background: url(/assets/img/icon-7.jpg) no-repeat center left;
+    background-size: 18px 26px;
+}
+
+.icon-5 {
+    background: url(/assets/img/icon-8.jpg) no-repeat center left;
+    background-size: 26px 26px;
+}
+
+.icon-9 {
+    background: url(/assets/img/icon-9.jpg) no-repeat center center;
+    background-size: 10px 18px;
+    width: 40px;
+    height: 38px;
+    line-height: 240%;
+}
+
+.icon-10 {
+    background: url(/assets/img/icon-10.png) no-repeat center center;
+    background-size: 60px 60px;
+}
+
+.icon-11 {
+    background: url(/assets/img/icon-11.png) no-repeat center center;
+    background-size: 60px 60px;
+}
+
+.icon-12 {
+    background: url(/assets/img/icon-12.png) no-repeat center center;
+    background-size: 15px 15px;
+}
+
+.icon-13 {
+    background: url(/assets/img/icon-13.png) no-repeat center center;
+    background-size: 15px 15px;
+}
+
+.icon-14 {
+    background: url(/assets/img/icon-14.png) no-repeat center center;
+    background-size: 12px 17px;
+}
+.icon-20 {
+    background: url(/assets/img/icon-20.jpg) no-repeat center center;
+    background-size: 18px 10px;
+    width: 40px;
+    height: 38px;
+    line-height: 240%;
+}
+.icon-29{background: url(/assets/img/icon-20.png) no-repeat left center; background-size:34px 34px; }
+.icon-21{background: url(/assets/img/icon-21.png) no-repeat left center; background-size:34px 34px;}
+.icon-22{background: url(/assets/img/icon-22.png) no-repeat left center; background-size:20px 23px;}
+.icon-23{background: url(/assets/img/icon-23.png) no-repeat left center; background-size:16px 18px;}
+.icon-24{background: url(/assets/img/icon-24.png) no-repeat left center; background-size:21px 17px;}
+.icon-25{background: url(/assets/img/icon-25.png) no-repeat left center; background-size:16px 16px;}
+.icon-26{background: url(/assets/img/icon-26.png) no-repeat left center; background-size:15px 13px;}
+.icon-27{background: url(/assets/img/icon-27.png) no-repeat left center; background-size:13px 13px;}
+.icon-28{background: url(/assets/img/icon-28.png) no-repeat left center; background-size:13px 13px;}
+/* 统一调用背景图 */
+/* 通过合成图标统一调用 */
+.m-logo a, .m-nav a, .m-nav em {
+    background: url(images/sprite.png) no-repeat 9999px 9999px;
+}
+
+/* 模块 */
+/* 头部底部 */
+.g-hd .title {
+    position: relative;
+    width: 100%;
+    height: 42px;;
+    line-height: 42px;
+}
+
+.g-hd .title .return {
+    margin: 0 0 0 10px;
+    color: #ccc;
+    line-height: 280%;
+    font-size: 160%;
+    display: inline-block;
+}
+
+.g-hd .title .list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(/assets/img/title-right.jpg) no-repeat right center;
+    background-size: 6px 19px;
+    height: 100%;
+    width: 12px;
+    margin: 0 14px 0 0;
+}
+
+.m-ft {
+    width: 100%;
+}
+
+.m-ft li {
+    width: 33.3333%;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+    height: 42px;
+    overflow: hidden;
+    line-height: 42px;
+}
+
+.m-ft li a {
+    float: left;
+    width: 100%;
+    height: 120%;
+    border-left: 1px solid #474c4d;
+    margin-left: -1px;
+    color: #ccc;
+}
+
+.m-ft li .icon {
+    margin: 0 6px 0 0;
+}
+
+.m-ft li a:hover {
+    background: #4c5254;
+}
+
+.m-logo {
+    background: url(/assets/img/id.png) no-repeat center center;
+    background-size: 44px 28px;
+    margin: 0 0 0 10px;
+    width: 44px;
+    height: 42px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* TITLE */
+.m-title {
+    position: relative;
+    display: block;
+    background: #fff;
+    overflow: hidden;
+}
+
+.m-title .left {
+    position: absolute;
+    width:40px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.m-title .right {
+    position: absolute;
+    width:40px;
+    height: 40px;
+    overflow: hidden;
+    right:0;
+    top:0;
+}
+
+.m-title h2 {
+    text-align: center;
+    width: 100%;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+.m-title .m-text {
+    float: left;
+    margin: 0 0 0 40px;
+}
+
+.m-title .m-text .u-text {
+}
+
+.m-title .u-buttom {
+    position: absolute;
+    right: 0;
+    float: right;
+    width: 80px;
+    line-height: 200%;
+    font-size: 140%;
+}
+
+.m-title .search {
+    line-height: 200%;
+    width: 60px;
+    float: right;
+    position: relative;
+    margin-left: -80px;
+}
+
+/* 元件 */
+.u-but {
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.u-but:hover, .u-but:focus {
+    text-decoration: none;
+}
+
+/* 后退按钮 */
+.u-back {
+    background: url(/assets/img/l-botten.png) no-repeat center center;
+    background-size: 24px 24px;
+    width: 36px;
+    display: inline-block;
+    line-height: 36px;
+    float: left;
+    margin-right: -36px;
+    position: relative;
+    border: 0;
+}
+
+/* 按钮 */
+.u-buttom {
+    border-radius: 3px;
+    background: #ff7800;
+    color: #fff;
+    font-size: 100%;
+    border: 0;
+}
+
+/* 搜索botton */
+.u-search {
+    width: 18px;
+    height: 36px;
+    display: inline-block;
+    font-size:14px;
+    color:#666;
+}
+
+/* 输入框 */
+/* .u-text {margin:0 80px 0 40px;}*/
+.u-text {
+    text-indent: 10px;
+    padding: 0 10px 0 0;
+    width: 100%;
+    font-size: 100%;
+    line-height: 300%;
+    color: #ccc;
+    background: #fff;
+    text-align: left;
+    border-radius: 3px;
+    border: 1px solid #d9d7d7;
+    border-top: 2px solid #b0adac;
+    border-bottom: 0px;
+}
+
+/* 箭头 */
+.u-arrow {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    border-width: 4px;
+    border-color: #777 transparent transparent transparent;
+    border-style: solid dashed dotted dashed;
+}
+
+.u-arrow1 {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    border-width: 4px;
+    border-color: transparent #777 transparent transparent;
+    border-style: dashed solid dotted dashed;
+}
+
+.u-arrow2 {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    border-width: 4px;
+    border-color: transparent transparent #777 transparent;
+    border-style: dashed dotted solid dashed;
+}
+
+.u-arrow3 {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    border-width: 4px;
+    border-color: transparent transparent transparent #777;
+    border-style: dashed dotted dashed solid;
+}
+
+/* 功能 */
+/* 功能可根据出现频率调整  可出现在特殊CSS中 */
+.f-cb:after, .f-cbli li:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    content: ".";
+}
+
+.f-cb, .f-cbli li {
+    zoom: 1;
+    display: block;
+}
+
+.f-ib {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.f-dn {
+    display: none;
+}
+
+.f-db {
+    display: block;
+}
+
+.f-fl {
+    float: left;
+}
+
+.f-fr {
+    float: right;
+}
+
+.f-pr {
+    position: relative;
+}
+
+/*.f-prz{position:relative;zoom:1;}*/
+.f-oh {
+    overflow: hidden;
+}
+
+/* 字体样式定义 */
+.f-ff0 {
+    font-family: arial, \5b8b\4f53;
+}
+
+.f-ff1 {
+    font-family: "Microsoft YaHei", \5fae\8f6f\96c5\9ed1, arial, \5b8b\4f53;
+}
+
+.f-fs1 {
+    font-size: 12px;
+}
+
+.f-fs2 {
+    font-size: 14px;
+}
+
+.f-c1 {
+    color: #666;
+}
+
+.f-c2 {
+    color: #333;
+}
+
+.f-ba1 {
+    background: #f1f1f1;
+}
+
+.f-bb1 {
+    border-bottom: 1px solid #ccc;
+}
+
+.f-bs1 {
+	
+}
+
+.f-pb45 {
+    padding-bottom: 45px;
+}
+
+.f-mb10 {
+    margin: 0 0 10px 0;
+}
+
+.f-fwn {
+    font-weight: normal;
+}
+
+.f-fwb {
+    font-weight: bold;
+}
+
+.f-tal {
+    text-align: left;
+}
+
+.f-tac {
+    text-align: center;
+}
+
+.f-tar {
+    text-align: right;
+}
+
+/*.f-taj{text-align:justify;text-justify:inter-ideograph;}
+.f-vam,.f-vama *{vertical-align:middle;}*/
+.f-wsn {
+    word-wrap: normal;
+    white-space: nowrap;
+}
+
+/* 禁用换行 */
+.f-pre {
+    overflow: hidden;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/* 模拟PER标签 */
+.f-wwb {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/* 换行（英文或符号状态） */
+.f-ti {
+    overflow: hidden;
+    text-indent: -30000px;
+}
+
+.f-ti2 {
+    text-indent: 2em;
+}
+
+.f-lhn {
+    line-height: normal;
+}
+
+.f-tdu, .f-tdu:hover {
+    text-decoration: underline;
+}
+
+.f-tdn, .f-tdn:hover {
+    text-decoration: none;
+}
+
+.f-toe {
+    overflow: hidden;
+    word-wrap: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.f-csp {
+    cursor: pointer;
+}
+
+/* 手型 */
+.f-csd {
+    cursor: default;
+}
+
+/* 普通 */
+.f-csh {
+    cursor: help;
+}
+
+/* 帮助 */
+.f-csm {
+    cursor: move;
+}
+
+/* 可移动 */
+/*.f-usn{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;}*/
+
+/* 皮肤 */
+/* kk目前没有皮肤设定  如后期有使用皮肤类设定可单独添加皮肤类CSS文件 */
+/*.s-fc, a.s-fc:hover { color: #fff; }*/
+
+/* 状态 */
+/* 网站统一状态可在共用CSS中出现 模块或功能私用状态可根据位置在子样式存在 */
+
+.z-fc {
+    background: #000;
+    opacity: 0.6;
+}
+
+
+/*** pop ***/
+.stack, .avgrund-overlay{-webkit-transition: 0.3s all ease-out;-moz-transition: 0.3s all ease-out;-ms-transition: 0.3s all ease-out;-o-transition: 0.3s all ease-out;transition: 0.3s all ease-out;}
+.stack{-webkit-transform: scale(1.5);-moz-transform: scale(1.5);-ms-transform: scale(1.5);-o-transform: scale(1.5);transform: scale(1.5);opacity:0;}
+.avgrund-active .stack{-webkit-transform: scale(1);-moz-transform: scale(1);-ms-transform: scale(1);-o-transform: scale(1);transform: scale(1);opacity:1;}
+.avgrund-active .avgrund-overlay{opacity:0.4;filter:alpha(opacity=40);}
+.avgrund-overlay{opacity:0;}
+.avgrund-overlay, .Tempdom_div_iframe{position:absolute;top:0;left:0;z-index:100;}
+.avgrund-overlay{background:#000;}
+.Tempdom_div_iframe{background:#fff;opacity:0;filter:alpha(opacity=0);}

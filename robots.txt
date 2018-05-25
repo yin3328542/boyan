@@ -1,0 +1,3 @@
+User-agent: * 
+Disallow: /?*
+Disallow: http://www.121dian.com/logout.html

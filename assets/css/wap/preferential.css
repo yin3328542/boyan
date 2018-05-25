@@ -1,0 +1,83 @@
+﻿/* 首页 */
+.prefe-index{ float:left; width:100%; padding:10px 0 0 0; background:#f1f1f1;}
+.prefe-index ul{ display:block; margin:0 10px;}
+.prefe-index li{ float:left; width:100%; position:relative; line-height:0; margin:0 0 10px 0;}
+.prefe-index li a{ color:#fff;}
+.prefe-index li img{}
+.prefe-index li .info{ position:absolute; bottom:4px; left:10px; line-height:200%;}
+.prefe-index li .info p{font-size:80%; line-height:120%;}
+
+/* 城市 */
+.prefe-city{ width:100%;}
+.prefe-city dt{ color: #f1f1f1; background:#f1f1f1; line-height:200%; width:100%; margin-top:-1px; border-bottom:1px solid #ccc; border-top:1px solid #ccc;}
+.prefe-city dt h3{ padding:0 16px; display:table-cell; margin:0 auto; color:#333;}
+.prefe-city dd{ width:100%; background:#fff; }
+.prefe-city ul{ display:table; width:100%;}
+.prefe-city li{ display:block; margin:-1px 16px 0 16px; border-top: 1px solid #ccc; }
+.prefe-city li a{ color:#333; display:table; width:100%; line-height:200%; background:url(../image/icon-5.jpg) no-repeat right center;}
+.prefe-city li a img{ vertical-align:middle;}
+
+/* 搜索 */
+.m-hotsearch { width:100%; }
+.m-hotsearch p {  font-size:150%; margin:0 auto; font-weight:bold; line-height:200%; }
+.m-hotsearch .m-title{ width:100%; height:100%; background:#f1f1f1; border-bottom:1px solid #cdcdcd;}
+.m-hotsearch ul{ width:91%; margin:0 auto;}
+.m-hotsearch li{ width:100%; border-bottom:1px solid #ccc; background:url(../image/icon-1.png) no-repeat right center; font-size:150%; line-height:200%;}
+
+/* 1级类目全部分类 */
+.prefe-Level{ width:100%;}
+.prefe-Level li{ padding:10px; border-bottom:1px solid #ccc;}
+.prefe-Level li img{ float:left;}
+.prefe-Level li b{ font-size:200%; color:#333; line-height:200%;}
+.prefe-Level li span{ padding:0 4px 0 0; line-height:120%;}
+
+/* 信息 */
+.prefe-info{ background:#f1f1f1; width:100%;}
+.prefe-info ul{ padding:10px 0 ;}
+.prefe-info li{ margin:0 10px 10px 10px; background: #fff; border-top:1px solid #fff; box-shadow:0px 1px 3px rgba(0, 0, 0, 0.2); }
+.prefe-info li a{ display:block; color:#666;}
+.prefe-info li p{ color: #666; padding:4px 10px 4px 10px; line-height:200%;}
+.prefe-info li .img{ display:block; margin:10px 10px 0 10px;}
+.prefe-info li .state{ background:#ededed; padding:0 10px; line-height:200%;}
+.prefe-info li .state span{ color: #acacac;}
+.prefe-info li .state b{ color: #f07158; padding:0 0 0 4px;}
+
+/* 终端信息 */
+.prefe-infos{ background:#f1f1f1; width:100%;}
+.prefe-infos .info{ background:#fff; padding:10px; margin:0 0 10px 0; display:block;}
+.prefe-infos .info h3{ font-size:200%; color: #c00; line-height:200%;}
+.prefe-infos .info p{ font-size:140%; color: #989898; line-height:160%; font-weight:400px;}
+.prefe-infos .info li{ color:#ccc; line-height:200%; background:url(../image/icon-6.jpg) no-repeat left center; padding:0 0 0 24px; background-size:18px 18px;}
+.prefe-infos .info .state { line-height:200%;}
+.prefe-infos .info .state span{ color: #acacac;}
+.prefe-infos .info .state b{ color: #f07158; padding:0 0 0 4px;}
+
+.prefe-infos .shop{ background:#fff; padding:10px 10px 0 10px; color:#666; line-height:240%; font-size:160%;}
+.prefe-infos .shop li{ border-top:1px solid #d8d8d8; width:100%; text-indent:32px;}
+.prefe-infos .receive{ padding:16px 30px; }
+.prefe-infos .receive .u-buttom{ width:100%; line-height:300%; font-size:200%;}
+
+/* 优惠卷 */
+.coupons{ background:#f1f1f1; width:100%; float:left;}
+.coupons .wm2{ margin:14px; float:left; border-top:1px solid #fff; border-left:1px solid #fff;}
+.coupons .wm2 .tis{ text-align:center; color:#333; font-size:200%; line-height:200%;}
+.coupons .wm2 .tis i{ background:url(../image/icon-17.png) no-repeat; display:inline-block; vertical-align:middle; margin:0 6px 0 0; width:12px; height:24px; background-size:12px 24px; }
+.coupons .wm2 .img{ background:#fff; padding:10px;}
+.coupons .wm2 .info{ background:#fff;}
+.coupons .wm2 .info p{ padding:0 10px; }
+.coupons .wm2 .info .title{ color:#cc0000; font-size:140%; line-height:180%;}
+.coupons .wm2 .info .data{ color: #666; font-size:120%; line-height:140%;}
+.coupons .wm2 .info .date{ color: #999; line-height:200%; padding-bottom:10px;}
+
+/* 积分 */
+.integral{ width:100%; background:#f1f1f1; float:left;}
+.integral .title{ color:#787878; font-weight:bold; padding:10px 10px 0 10px; font-size:120%; line-height:200%;}
+.integral .numbet{padding:6px 10px;}
+.integral .yzm{padding:6px 10px;}
+.integral .name{padding:6px 10px;}
+.integral p{ display:block; line-height:200%; font-size:140%; color: #7c7c7c;}
+.integral .u-text{ width:80%; line-height:200%;}
+
+.integral .but{padding:10px;}
+.integral .but .f-fl{ background:#ff5100; line-height:260%; width:40%; font-size:160%;}
+.integral .but .f-fr{ background:#999999; line-height:260%; width:40%; font-size:160%;}

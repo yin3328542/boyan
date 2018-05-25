@@ -1,0 +1,33 @@
+﻿/* 首页 */
+.life-index{ width:100%;}
+.life-index .list{ width:100%; background: #fff; float:left;}
+.life-index .list li{  float:left; width:33%; text-align:center; padding:10px 0;}
+.life-index .list li p{ color:#000; line-height:200%;}
+.life-index .img{ float:left; background:#f1f1f1; display:block;}
+.life-index .img ul{ padding:10px 10px 0 10px;}
+.life-index .img li{ display:block; margin:0 0 10px 0; width:100%;}
+.life-index .img li img{ width:100%;}
+
+/* 商家 */
+.life-shpo { width:100%:}
+.life-shpo ul{ background:#fff;}
+.life-shpo li{ padding:10px; border-bottom:1px solid #ccc;  border-top:1px solid #ccc; margin:0 0 -1px 0;}
+.life-shpo li img{ float:left; margin:0 10px 0 0;}
+.life-shpo .info p{ overflow:hidden; line-height:140%;}
+.life-shpo .info .title{ color:#000; font-size:140%; line-height:160%;font-weight:bold;}
+.life-shpo .info i{ width:15px; line-height:160%; float:right; margin:0 0 0 5px;}
+
+/* 商家分类 */
+.life-shpoclass{ width:100%:}
+.life-shpoclass .img{ padding:10px; margin:1px 0 0 0; background:#fff; border-bottom:1px solid #ccc;}
+.life-shpoclass .in .on{ background:none;}
+.life-shpoclass .in{ margin:10px 0 0 0;  background:#fff; border-bottom:1px solid #ccc;  border-top:1px solid #ccc;}
+.life-shpoclass .in p{ background:url(../image/icon-16.png) no-repeat left center; background-size:20px 20px; margin:0 10px -1px 10px; text-indent:30px;  border-bottom:1px solid #ccc; line-height:200%; color:#000; }
+.life-shpoclass .link{ line-height:200%; padding:0 10px; background:#fff; border-bottom:1px solid #ccc;  border-top:1px solid #ccc; margin:10px 0 0 0; color:#000;}
+.life-shpoclass .info{ color:#000; background:#fff; border-bottom:1px solid #ccc; padding:0 10px; border-top:1px solid #ccc; margin:10px 0 0 0;}
+.life-shpoclass .info p{ color:#666; line-height:240%; font-size:120%;}
+.life-shpoclass .info ul{ width:100%;}
+.life-shpoclass .info li{ border-top:1px solid #d8d8d8; display:block; width:100%; line-height:320%; font-size:140%; text-indent:32px;}
+.life-shpoclass .bot { width:100%; text-align:center;}
+.life-shpoclass .bot input{ width:90%; height:70px; background:#11a3d4; color:#fff; font-size:200%; margin:10px auto;}
+

@@ -1,0 +1,54 @@
+﻿/* animation */        /* 动画库根据需要实现的效果定义 如需兼容低版本请在书写CSS3动画时 注意动画版本的设定 */
+
+@keyframes progres {
+    0%{ background-image:linear-gradient(to bottom, #D9534F 0px, #C9302C 100%); background-color: #D9534F; float: left; width:0%;}
+    25%{ background-image: linear-gradient(to bottom, #F0AD4E 0px, #EC971F 100%); background-color: #F0AD4E; float: left; width: 25%; }
+    50%{ background-image: linear-gradient(to bottom, #5BC0DE 0px, #31B0D5 100%); background-color: #5BC0DE; float: left; width: 50%;}
+    75%{ background-image: linear-gradient(to bottom, #5CB85C 0px, #449D44 100%); background-color: #5CB85C; float: left; width: 75%;}
+    100%{ background-image: linear-gradient(to bottom, #428BCA 0px, #3071A9 100%); background-color: #428BCA; float: left; width: 100%;}
+}
+
+@-moz-keyframes progres {
+    0%{ background-image:linear-gradient(to bottom, #D9534F 0px, #C9302C 100%); background-color: #D9534F; float: left; width:0%;}
+    25%{ background-image: linear-gradient(to bottom, #F0AD4E 0px, #EC971F 100%); background-color: #F0AD4E; float: left; width: 25%; }
+    50%{ background-image: linear-gradient(to bottom, #5BC0DE 0px, #31B0D5 100%); background-color: #5BC0DE; float: left; width: 50%;}
+    75%{ background-image: linear-gradient(to bottom, #5CB85C 0px, #449D44 100%); background-color: #5CB85C; float: left; width: 75%;}
+    100%{ background-image: linear-gradient(to bottom, #428BCA 0px, #3071A9 100%); background-color: #428BCA; float: left; width: 100%;}
+}
+
+@-ms-keyframes progres{
+    0%{ background-image:linear-gradient(to bottom, #D9534F 0px, #C9302C 100%); background-color: #D9534F; float: left; width:0%;}
+    25%{ background-image: linear-gradient(to bottom, #F0AD4E 0px, #EC971F 100%); background-color: #F0AD4E; float: left; width: 25%; }
+    50%{ background-image: linear-gradient(to bottom, #5BC0DE 0px, #31B0D5 100%); background-color: #5BC0DE; float: left; width: 50%;}
+    75%{ background-image: linear-gradient(to bottom, #5CB85C 0px, #449D44 100%); background-color: #5CB85C; float: left; width: 75%;}
+    100%{ background-image: linear-gradient(to bottom, #428BCA 0px, #3071A9 100%); background-color: #428BCA; float: left; width: 100%;}
+}
+
+@-webkit-keyframes progres {
+    0%{ background-image:linear-gradient(to bottom, #D9534F 0px, #C9302C 100%); background-color: #D9534F; float: left; width:0%;}
+    25%{ background-image: linear-gradient(to bottom, #F0AD4E 0px, #EC971F 100%); background-color: #F0AD4E; float: left; width: 25%; }
+    50%{ background-image: linear-gradient(to bottom, #5BC0DE 0px, #31B0D5 100%); background-color: #5BC0DE; float: left; width: 50%;}
+    75%{ background-image: linear-gradient(to bottom, #5CB85C 0px, #449D44 100%); background-color: #5CB85C; float: left; width: 75%;}
+    100%{ background-image: linear-gradient(to bottom, #428BCA 0px, #3071A9 100%); background-color: #428BCA; float: left; width: 100%;}
+}
+
+
+@keyframes progres1 {
+    0%{background-position:0 0;}
+    100%{background-position:30px 0;}
+}
+
+@-moz-keyframes progres1 {
+    0%{background-position:0 0;}
+    100%{background-position:30px 0;}
+}
+
+@-ms-keyframes progres1{
+    0%{background-position:0 0;}
+    100%{background-position:30px 0;}
+}
+
+@-webkit-keyframes progres1 {
+    0%{background-position:0 0;}
+    100%{background-position:30px 0;}
+}

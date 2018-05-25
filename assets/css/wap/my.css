@@ -1,0 +1,98 @@
+﻿/* 首页 */
+.my-index{ float:left; width:100%;}
+.my-index .info{ padding:20px 0; position:relative;}
+.my-index .info b{color: #a93434; display:block;text-align:center; line-height:150%;}
+.my-index .info span{color: #666; display:block; text-align:center; line-height:150%;}
+.my-index .info .left{ position:absolute; left:0; top:0; width:100px; padding:35px 0;}
+.my-index .info .cant{ background: #4883dc; border-radius:50%; text-align:center; margin:0 auto; font-size:160%; color:#fff; line-height:70px; width:70px; height:70px; box-shadow:0px 0px 10px rgba(72,131,220,0.3);}
+.my-index .info .right{ position:absolute; right:0; top:0; width:100px; padding:35px 0;}
+.my-index .info p{ color:#999; text-align: center; line-height:300%; font-size:140%;}
+.my-index .info p i{color: #cc6666;}
+.my-index .list{ display:block;}
+.my-index .list p{ background:#fff; color: #000; padding:0 10px; border-top:1px solid #cecece; border-bottom:1px solid #cecece; font-size:160%; line-height:200%; }
+.my-index .list p span{ display:block; width:100%;}
+
+/* 便民查询 */
+.my-query{ width:100%;}
+.my-query .cx h3{ line-height:200%; font-size:120%; padding:4px 10px 0 10px; color:#666; }
+.my-query .cx ul{ width:100%; background:#fff;}
+.my-query .cx li{ float:left; background:#fff; text-align:center; padding:10px 0; width:33%; border:1px solid #ebebeb; border-right:0; margin:0 0 0 -1px;  }
+.my-query .cx li span{ height:53px; width:100%; display:block;}
+.my-query .cx li p{ line-height:240%; color:#666; font-size:120%;}
+
+.my-query .bannet h3{ line-height:200%; font-size:120%; padding:4px 10px 0 10px; color:#666; }
+.my-query .bans ul{ width:100%; background:#fff;}
+.my-query .bans li{ float:left; background:#fff; text-align:center; padding:10px 0; width:33%; border:1px solid #ebebeb; border-right:0; margin:0 0 0 -1px;  }
+.my-query .bans li span{ height:53px; width:100%; display:block;}
+.my-query .bans li p{ line-height:240%; color:#666; font-size:120%;}
+.my-query .list{ width:100%; border-bottom:1px solid #ccc; line-height:200%; height:20px;}
+
+/* 关于我们 */
+.my-about { width:100%; }
+.my-about .info{ padding:0 0 10px 0;}
+.my-about .title{ font-size:140%; padding:4px 10px; line-height:200%; color:#000; font-weight:bold;}
+.my-about p{ padding:0 10px; line-height:200%; font-size:120%; color:#000;}
+
+/* 我的优惠劵 */
+.my-coupon { width:100%; padding-bottom: 40px; margin-top:1px;}
+.my-coupon ul{ }
+.my-coupon li{ background:#fff; height: 75px; box-sizing:border-box; overflow: hidden; box-shadow:0px 0px 1px #ccc; margin-bottom:1px; display:block; position:relative; }
+.my-coupon li img{ float:left; width:55px; height:55px;}
+.my-coupon li .info{ display:block; overflow: hidden; padding-left:10px; font-size:12px;}
+.my-coupon li .info .infos{float: left; width:70%;}
+.my-coupon li .info .infos p{ color:#999; overflow:hidden; line-height: 16px;}
+.my-coupon li .info .infos .title{ color:#000; font-weight:bold; height: 20px; line-height: 20px; overflow: hidden; font-size:14px; text-indent: -6px;}
+.my-coupon li a{
+	padding:10px 0 10px 10px;
+	width:100%;
+	height: 55px;
+	background: #fff;
+	display: block;
+	position: relative;
+	box-sizing:border-box;
+	z-index: 10;
+}
+
+.my-coupon li .del{
+	display: block;
+	width:62px;
+	height: 75px;
+	overflow: hidden;
+	background: #f60;
+	color:#fff;
+	font-size:18px;
+	position: absolute;
+	right:0;
+	top:0;
+	z-index: 1;
+	text-align: center;
+	line-height: 20px;
+	font-size:14px;
+}
+
+.my-coupon li .del .close{
+	font-size:20px;
+	margin-top:15px;
+	font-weight: 900;
+	text-shadow: 0px 0px 2px #fff;
+}
+.my-coupon li a .info .date{ float:right; width:26%; font-size:12px; line-height: 16px; text-align:center; padding:4px 10px 0 0; color:#999;}
+.my-coupon li .info .date .start,.my-coupon li .info .date .end{font-size:10px;}
+.my-coupon .z-fc{ position:absolute; top:0; left:0; width:100%; height:77px; line-height:77px;}
+.my-coupon .z-fc i{ float:right; vertical-align:middle; display:inline-block;  width:77px; height:77px; }
+
+/* 我的优惠劵编辑 */
+.my-coupon-edit { width:100%;}
+.my-coupon-edit .delete{ float:right; height:37px; padding:20px 0; margin:0 0 0 10px; width:66px; background:#ff6600;}
+.my-coupon-edit .delete .icon-12{ width:15px; height:15px; display:block; margin:0 auto;}
+.my-coupon-edit .delete p{ width:100%; text-align:center; line-height:200%; color:#fff;}
+.my-coupon-edit ul{ padding:10px 0 0 0;}
+.my-coupon-edit li{ background:#fff; border-bottom:1px solid #ccc; border-top:1px solid #ccc; margin:-1px 0 0 0; display:block;}
+.my-coupon-edit li .info{ display:block; padding:10px;}
+.my-coupon-edit li .info .infos{}
+.my-coupon-edit li .info .infos p{ color:#999; line-height:160%; overflow:hidden;}
+.my-coupon-edit li .info .infos .title{ color:#000; font-weight:bold;}
+.my-coupon-edit li .info .date{ float:right; text-align:center; margin:0 0 0 10px; line-height:160%; font-size:120%;}
+
+
+

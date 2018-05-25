@@ -1,0 +1,10 @@
+
+
+/data
+.env.php
+.DS_Store
+.idea
+*.psd
+.phpintel
+Thumbs.db
+/app/config/development
