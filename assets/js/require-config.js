@@ -20,6 +20,8 @@ var require_config ={
         validform: '/assets/js/jquery/Validform_v5.3.2',
         clipboard: '/assets/js/clipboard/ZeroClipboard',
         tagsinput: '/assets/js/bootstrap/bootstrap-tagsinput.min',
+        ckeditor_base: '/assets/js/ckeditor/ckeditor',
+        ckeditor: '/assets/js/ckeditor/adapters/jquery',
         moment: '/assets/js/moment.min',
         dateRangePicker: '/assets/js/bootstrap/daterangepicker',
         calendar: '/assets/js/calendar/lhgcalendar.min',
@@ -72,6 +74,10 @@ var require_config ={
         },
         tagsinput: {
             deps: ['jquery']
+        },
+        ckeditor: {
+            deps: ['jquery', 'ckeditor_base'],
+            exports: 'CKEditor'
         },
         calendar: {
             deps: ['jquery'],

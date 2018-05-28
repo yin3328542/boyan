@@ -10,11 +10,10 @@ define([
     'components/model',
     'components/template-native',
     'fineuploader',
-    'ckeditor',
     'dialog',
     'calendar',
     'nprogress'
-], function( $, kunrou, Model, template, Uploader, cheditor, dialog,calendar ,Nprogress ){
+], function( $, kunrou, Model, template, Uploader, dialog,calendar ,Nprogress ){
     Nprogress.start();
 
     var model = new Model();
