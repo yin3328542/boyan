@@ -62,7 +62,7 @@ class Service extends API_Controller
 
         $data['title'] = $this->post('title') ? $this->post('title') : '';
         $data['img'] = $this->post('img') ? intval($this->post('img')) : 0;
-        $data['description'] = $this->post('description') ? intval($this->post('description')) : 0;
+        $data['description'] = $this->post('description') ? $this->post('description') : '';
         $data['listorder'] = $this->post('listorder') ? intval($this->post('listorder')) : 255;
         $data['dt_add'] = time();
 
@@ -119,7 +119,7 @@ class Service extends API_Controller
         $data['title'] = $this->put('title') ? $this->put('title') : '';
         $data['img'] = $this->put('img') ? intval($this->put('img')) : 0;
         $data['listorder'] = $this->put('listorder') ? intval($this->put('listorder')) : 255;
-        $data['description'] = $this->put('description') ? intval($this->put('description')) :'';
+        $data['description'] = $this->put('description') ? $this->put('description') :'';
         $data['dt_update'] = time();
 
         if($data['title']==''){
