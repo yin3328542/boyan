@@ -109,6 +109,9 @@ class API_Controller extends REST_Controller {
             case APPTYPE_PC :
                 $this->load->model('member_model', 'user_model');
                 break;
+            case APPTYPE_XCX :
+                $this->load->model('member_xcx_model', 'user_model');
+                break;
         }
 
         $this->_user = $this->user_model->find($access['uid']);
