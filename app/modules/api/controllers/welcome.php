@@ -182,7 +182,7 @@ class Welcome extends API_Controller
         $where['status'] = 1;
         $response['total'] = $this->news_model->where($where)->count();
         $casesList = $this->news_model
-            ->select('news.id,title,img,intro')
+            ->select('news.id,title,img,intro,attachment.filepath')
             ->join('attachment','attachment.id = news.img')
             ->where($where)
             ->order_by('news.id', 'desc')
