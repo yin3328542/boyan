@@ -257,13 +257,13 @@ class Welcome extends API_Controller
         $where['banner.type'] = $type;
         $this->load->model('banner_model');
         $bannerList = $this->banner_model
-            ->select('banner.id,name,img')
+            ->select('banner.id,name,img,attachment.filepath')
             ->where($where)
             ->join('attachment','attachment.id = banner.img')
             ->order_by('listorder','asc')
             ->find_all();
         foreach ($bannerList as $k=>$v){
-            $v['img']  =image_url($v['img']);
+            $v['img']  =image_url($v['filepath']);
             $bannerList[$k] = $v;
         }
 

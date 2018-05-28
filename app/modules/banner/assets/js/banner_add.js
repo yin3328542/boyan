@@ -108,7 +108,7 @@ define([
                 'img_input' : 'required',
             },
             success: function() {
-                location.href = '/admin/banner';
+                location.href = '/admin/banner/'+type;
             }
         }).save()) {
             return false;
