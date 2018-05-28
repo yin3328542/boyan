@@ -146,7 +146,7 @@ class Welcome extends API_Controller
         }
         $this->load->model('service_model');
         $serviceList = $this->service_model
-            ->select('service.id,title,img,description')
+            ->select('service.id,title,img,description,attachment.filepath')
             ->join('attachment','attachment.id = service.img')
             ->find_all();
         foreach ($serviceList as $k=>$v){
