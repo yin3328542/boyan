@@ -17,8 +17,8 @@ class Welcome extends API_Controller
         $variable['by_location_latitude'] = 0;
         if(!empty($variable['by_location'])){
             $location =  explode(',',$variable['by_location']);
-            $variable['by_location_longitude'] = $location[0];
-            $variable['by_location_latitude'] = $location[1];
+            $variable['by_location_longitude'] = $location[1];
+            $variable['by_location_latitude'] = $location[0];
         }
         unset($variable['by_location']);
         unset($variable['by_app_id']);
