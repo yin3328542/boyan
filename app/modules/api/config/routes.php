@@ -9,3 +9,4 @@ $route['api/app/case'] = 'api/welcome/case';
 $route['api/app/banners'] = 'api/welcome/banners';
 $route['api/app/contact'] = 'api/welcome/contact';
 $route['api/app/adsense'] = 'api/welcome/adsense';
+$route['api/app/join/contact'] = 'api/welcome/join_contact';

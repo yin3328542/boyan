@@ -296,4 +296,39 @@ class Welcome extends API_Controller
 
     }
 
+    public function join_contact_get()
+    {
+        if($this->app['type'] != APPTYPE_XCX ) {
+            $this->response(array('ret' => 403, 'msg' => '权限不足'), 403);
+        }
+        $name = trim($this->post('name'));
+        $mobile = trim($this->post('mobile'));
+        $message = trim($this->post('message'));
+        $time = trim($this->post('time'));
+        $member_id = $this->_user['id'];
+        $dt_add = time();
+
+        $this->load->model('contact_model');
+
+        if(!preg_match("/^1[34578]\d{9}$/", $mobile)){
+            $this->response(array('ret' => 401, 'msg' => '请填写正确的手机号码!'));
+        }
+
+
+        $data = array();
+
+        $data['name'] = $name;
+        $data['mobile'] = $mobile;
+        $data['message'] = $message;
+        $data['time'] = $time;
+        $data['member_id'] = $member_id;
+        $data['dt_add'] = $dt_add;
+
+        if($this->contact_model->add($data)){
+            $this->response(array('ret' => 0,'msg'=>'添加成功'));
+        }else{
+            $this->response(array('ret' => 401,'msg'=>'系统错误'));
+        }
+    }
+
 }
