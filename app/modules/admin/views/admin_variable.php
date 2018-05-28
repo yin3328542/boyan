@@ -28,7 +28,7 @@
 <script type="text/template" id="data-item">
     <tr>
         <td>
-            <%if (name=='zl_location') {%>
+            <%if (name=='by_location') {%>
             <a href="http://lbs.qq.com/tool/getpoint/index.html"><%=remark%></a>
             <%}else{%>
             <%=remark%>
