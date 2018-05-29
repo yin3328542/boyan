@@ -28,6 +28,7 @@
                     <th>ID</th>
                     <th>姓名</th>
                     <th>手机号码</th>
+                    <th>预约时间</th>
                     <th>留言</th>
                     <th>状态</th>
                     <th width="220">管理</th>
@@ -50,6 +51,7 @@
         <td><%=id%></td>
         <td><%=name%></td>
         <td><%=mobile%></td>
+        <td><%=time%></td>
         <td style="word-break: break-all;width:15%"><%=message%></td>
         <td><%=status_str%></td>
         <td>
