@@ -41,19 +41,18 @@ class Welcome extends API_Controller
         foreach ($variableList as $v){
             $variable[$v['name']] = $v['value'];
         }
-//        $wxapplet = new Wxapplet(['app_id'=>$variable['by_app_id'],'app_secret'=>$variable['by_app_secret']]);
-//        $open_id_info =$wxapplet->getUserOpenID($code);
-//        if(isset($open_id_info['errcode'])){
-//            return KRHelper::errorResponse($open_id_info['errcode'],$open_id_info['errmsg']);
-//        }
-//        if(!is_array($open_id_info)){
-//            return KRHelper::errorResponse(ErrorCode::INVALID_PARAM);
-//        }
-//        if(empty($open_id_info)){
-//            return KRHelper::errorResponse(ErrorCode::GETTING_OPEN_ID_FAILURE);
-//        }
-        //$open_id = $open_id_info['openid'];
-        $open_id = '222';
+        $this->load->library('Wxapplet', ['app_id'=>$variable['by_app_id'],'app_secret'=>$variable['by_app_secret']]);
+        $open_id_info =$this->wxapplet->getUserOpenID($code);
+        if(isset($open_id_info['errcode'])){
+            $this->response(array('ret' => 403, 'msg' =>$open_id_info['errmsg']));
+        }
+        if(!is_array($open_id_info)){
+            $this->response(array('ret' => 403, 'msg' =>'无效的code'));
+        }
+        if(empty($open_id_info)){
+            $this->response(array('ret' => 403, 'msg' =>'无效的code'));
+        }
+        $open_id = $open_id_info['openid'];
         $data = [];
         $this->load->model('member_xcx_model');
         $memberInfo=$this->member_xcx_model->where(['open_id'=>$open_id])->find();
