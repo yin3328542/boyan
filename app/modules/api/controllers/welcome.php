@@ -125,6 +125,7 @@ class Welcome extends API_Controller
         $this->load->model('admin_model');
         $adminInfo = $this->admin_model->select('description')->find();
         $result['description'] = $adminInfo['description'];
+        $result['description_short'] = strip_tags($adminInfo['description']);
         $result['ad_img'] = '';
         $this->load->model('adsense_model');
         $adsenseInfo = $this->adsense_model
