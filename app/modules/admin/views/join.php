@@ -6,7 +6,7 @@
     <div id="breadcrumb">
         <a href="/admin" class="tip-bottom" data-original-title="回到首页"><i class="glyphicon glyphicon-home"></i> 首页</a>
     </div>
-    <h1>加盟申请列表</h1>
+    <h1>预约列表</h1>
 </div>
 
 <div class="container-fluid">
@@ -17,7 +17,7 @@
             <div class="panel-heading">
                 <div class="cmd-list">
                     <div class="btn-group">
-                        <a href="/admin/join" class="btn btn-default  active">加盟申请列表</a>
+                        <a href="/admin/join" class="btn btn-default  active">预约列表</a>
                     </div>
                 </div>
             </div>
@@ -27,8 +27,8 @@
                     <th width="30"><input type="checkbox" data-toggle="chackall" data-target=".J_CheckItem"></th>
                     <th>ID</th>
                     <th>姓名</th>
-                    <th>电话</th>
-                    <th width="20%">公司名称</th>
+                    <th>手机号码</th>
+                    <th>留言</th>
                     <th>状态</th>
                     <th width="220">管理</th>
                 </tr>
@@ -50,7 +50,7 @@
         <td><%=id%></td>
         <td><%=name%></td>
         <td><%=mobile%></td>
-        <td><%=company%></td>
+        <td style="word-break: break-all;width:15%"><%=message%></td>
         <td><%=status_str%></td>
         <td>
             <%if(status==0){%>
