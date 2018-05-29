@@ -41,7 +41,7 @@ class Welcome extends API_Controller
         foreach ($variableList as $v){
             $variable[$v['name']] = $v['value'];
         }
-        $this->load->library('Wxapplet', ['app_id'=>$variable['by_app_id'],'app_secret'=>$variable['by_app_secret']]);
+        $this->load->library('Wxapplet', ['app_id'=>$variable['by_app_id'],'app_secret'=>$variable['by_app_secret']],'wxapplet');
         $open_id_info =$this->wxapplet->getUserOpenID($code);
         if(isset($open_id_info['errcode'])){
             $this->response(array('ret' => 403, 'msg' =>$open_id_info['errmsg']));

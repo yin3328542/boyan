@@ -1,8 +1,6 @@
 <?php
-namespace App\Libs;
 class Wxapplet
 {
-
     protected $_api_server  = 'https://api.weixin.qq.com/sns/';
     protected $_ci;
     protected $_app_id='';
