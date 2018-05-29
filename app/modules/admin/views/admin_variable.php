@@ -29,7 +29,7 @@
     <tr>
         <td>
             <%if (name=='by_location') {%>
-            <a href="http://lbs.qq.com/tool/getpoint/index.html"><%=remark%></a>
+            <a target="_blank" href="http://lbs.qq.com/tool/getpoint/index.html"><%=remark%></a>
             <%}else{%>
             <%=remark%>
             <%}%>
