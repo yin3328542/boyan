@@ -181,13 +181,13 @@ class Welcome extends API_Controller
         $this->load->model('news_model');
 
         $where['status'] = 1;
-        $response['total'] = $this->news_model->where($where)->count();
+        //$response['total'] = $this->news_model->where($where)->count();
         $casesList = $this->news_model
             ->select('news.id,title,img,intro,attachment.filepath')
             ->join('attachment','attachment.id = news.img')
             ->where($where)
             ->order_by('news.id', 'desc')
-            ->limit($limit, $offset)
+            //->limit($limit, $offset)  暂时注释分页功能
             ->find_all();
         foreach ($casesList as $k=>$v){
             $v['img']  =image_url($v['filepath']);
