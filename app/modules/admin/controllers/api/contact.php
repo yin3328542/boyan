@@ -22,9 +22,9 @@ class Contact extends API_Controller {
         $response['_count'] = $this->model
             ->count();
 
-        $response['data'] = $this
-            ->model
+        $response['data'] = $this->model
             ->order_by($sort, $order)
+            ->order_by('id', 'desc')
             ->limit($limit, $offset)
             ->find_all();
         foreach ( $response['data'] as $k=>$v){
