@@ -98,7 +98,7 @@ class Welcome extends API_Controller
 
         $this->load->model('column_model');
         $columnList = $this->column_model
-            ->select('id,name,img')
+            ->select('id,name,img,model')
             ->where(['status'=>1])->find_all();
         foreach ($columnList as $k=>$v){
             $attachment = $this->attachment_model->where(['id'=>$v['img']])->find();
@@ -107,6 +107,7 @@ class Welcome extends API_Controller
                 continue;
             }
             $v['img'] = image_url($attachment['filepath']);
+            $v['type'] = $v['model'];
             $columnList[$k] = $v;
         }
         $result['column_list'] = array_values($columnList);
